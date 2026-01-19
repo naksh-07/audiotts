@@ -6,7 +6,7 @@ from google.genai import types
 # ==========================================
 # 🔑 APNI KEY YAHAN DAAL (DIRECT)
 # ==========================================
-GEMINI_API_KEY = "TERI_ASLI_KEY_YAHAN_DAAL"  # 👈 Yahan apni asli key paste kar
+GEMINI_API_KEY = ""  # 👈 Yahan apni asli key paste kar
 
 # ==========================================
 # ⚙️ PATH SETTINGS
@@ -119,7 +119,7 @@ def generate_latex():
 
         # Gemini 2.5 Flash ko call karo
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-flash-latest",
             contents=f"Here is the story text. Convert it to the specified A4 LaTeX format:\n\n{raw_text}",
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
